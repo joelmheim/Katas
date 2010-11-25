@@ -20,11 +20,21 @@ class Tennis
   end
   
   def score
-    return "player one wins" if @score_player_one == 4 and @score_player_two == 0
-    return "player two wins" if @score_player_one == 0 and @score_player_two == 4
     return "deuce" if both_players_have :forty and score_is_equal
-    return "advantage #{leading_player}" if both_players_have :forty and one_player_leads
+    return "advantage #{leading_player}" if both_players_have :forty and 
+                                   one_player_leads_by_one
+    return "#{leading_player} wins" if one_player_has_at_least_four_points and
+                                        at_least_two_points_more_than_opponent
     return pretty(@score_player_one) + " - " + pretty(@score_player_two)
+  end
+
+  def one_player_has_at_least_four_points
+    @score_player_one >= 4 or @score_player_two >= 4
+  end
+
+  def at_least_two_points_more_than_opponent
+    @score_player_one >= @score_player_two + 2 or
+      @score_player_one +2 <= @score_player_two
   end
 
   def leading_player
@@ -32,8 +42,9 @@ class Tennis
     return "player two" if player_two_leads
   end
 
-  def one_player_leads
-    player_one_leads or player_two_leads
+  def one_player_leads_by_one
+    (player_one_leads and @score_player_one == @score_player_two + 1) or
+      (player_two_leads and @score_player_one + 1 == @score_player_two)
   end
 
   def player_one_leads

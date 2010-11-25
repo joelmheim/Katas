@@ -8,6 +8,13 @@ describe Tennis do
     @tennis = Tennis.new
   end
 
+  def self.tennis_test balls, expected_result
+    it "should return '#{expected_result}' when #{balls[:player_one]} - #{balls[:player_two]}" do
+      @tennis.play balls[:player_one], balls[:player_two]
+      @tennis.score.should eql expected_result
+    end
+  end
+
   describe "score" do
     {
       {:player_one => 0, :player_two => 0} => "love - love",
@@ -24,10 +31,7 @@ describe Tennis do
       {:player_one => 3, :player_two => 0} => "forty - love",
       {:player_one => 0, :player_two => 3} => "love - forty",
     }.each do | balls, expected_result |
-      it "should return '#{expected_result}' when #{balls[:player_one]} - #{balls[:player_two]}" do
-        @tennis.play balls[:player_one], balls[:player_two]
-        @tennis.score.should eql expected_result
-      end
+      tennis_test balls, expected_result
     end
   end
 
@@ -39,10 +43,7 @@ describe Tennis do
       {:player_one => 6, :player_two => 6} => "deuce",
       {:player_one => 7, :player_two => 7} => "deuce",
     }.each do | balls, expected_result |
-      it "should return '#{expected_result}' when #{balls[:player_one]} - #{balls[:player_two]}" do
-        @tennis.play balls[:player_one], balls[:player_two]
-        @tennis.score.should eql expected_result
-      end
+      tennis_test balls, expected_result
     end
   end
 
@@ -56,10 +57,7 @@ describe Tennis do
       {:player_one => 6, :player_two => 7} => "advantage player two",
       
     }.each do | balls, expected_result |
-      it "should return '#{expected_result}' when #{balls[:player_one]} - #{balls[:player_two]}" do
-        @tennis.play balls[:player_one], balls[:player_two]
-        @tennis.score.should eql expected_result
-      end
+      tennis_test balls, expected_result
     end
   end
 
@@ -67,17 +65,17 @@ describe Tennis do
     {
       {:player_one => 4, :player_two => 0} => "player one wins",
       {:player_one => 0, :player_two => 4} => "player two wins",
-#      {:player_one => 5, :player_two => 4} => "advantage player one",
-#      {:player_one => 4, :player_two => 5} => "advantage player two",
-#      {:player_one => 7, :player_two => 6} => "advantage player one",
-#      {:player_one => 6, :player_two => 7} => "advantage player two",
+      {:player_one => 4, :player_two => 1} => "player one wins",
+      {:player_one => 1, :player_two => 4} => "player two wins",
+      {:player_one => 4, :player_two => 2} => "player one wins",
+      {:player_one => 2, :player_two => 4} => "player two wins",
+      {:player_one => 5, :player_two => 3} => "player one wins",
+      {:player_one => 3, :player_two => 5} => "player two wins",
+      {:player_one => 6, :player_two => 4} => "player one wins",
+      {:player_one => 4, :player_two => 6} => "player two wins",
     }.each do | balls, expected_result |
-      it "should return '#{expected_result}' when #{balls[:player_one]} - #{balls[:player_two]}" do
-        @tennis.play balls[:player_one], balls[:player_two]
-        @tennis.score.should eql expected_result
-      end
+      tennis_test balls, expected_result
     end
   end
-
 end
 
