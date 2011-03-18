@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SpecRunner.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SpecRunner.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpecRunner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="2" selection-start="541" selection-end="541" vertical-scroll-proportion="0.33238637">
+            <state line="13" column="2" selection-start="541" selection-end="541" vertical-scroll-proportion="-4.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tennis.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Tennis.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tennis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+            <state line="9" column="30" selection-start="260" selection-end="260" vertical-scroll-proportion="0.35904256">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="TennisSpec.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/TennisSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="25" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+            <state line="20" column="54" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -64,9 +64,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/SpecRunner.html" />
         <option value="$PROJECT_DIR$/spec/TennisSpec.js" />
         <option value="$PROJECT_DIR$/src/Tennis.js" />
-        <option value="$PROJECT_DIR$/SpecRunner.html" />
       </list>
     </option>
   </component>
@@ -260,23 +260,23 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SpecRunner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="2" selection-start="541" selection-end="541" vertical-scroll-proportion="-4.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spec/TennisSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="25" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+        <state line="20" column="54" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tennis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpecRunner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="541" selection-end="541" vertical-scroll-proportion="0.33238637">
+        <state line="9" column="30" selection-start="260" selection-end="260" vertical-scroll-proportion="0.35904256">
           <folding />
         </state>
       </provider>
