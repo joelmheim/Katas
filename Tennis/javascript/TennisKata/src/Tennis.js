@@ -1,33 +1,35 @@
-function Tennis() {
-    this.ballsPlayerOne = 0;
-    this.ballsPlayerTwo = 0;
-    this.scores = ['love', 'fifteen', 'twenty', 'thirty', 'forty'];
+function makeTennis() {
+    var ballsPlayerOne = 0;
+    var ballsPlayerTwo = 0;
+    var scores = ['love', 'fifteen', 'twenty', 'thirty', 'forty'];
 
-    Tennis.prototype.scoreIsEqual = function() {
-        return this.ballsPlayerOne === this.ballsPlayerTwo;
-    }
+	function scoreIsEqual() {
+		return ballsPlayerOne === ballsPlayerTwo;
+	}
 
-    Tennis.prototype.winningPlayer = function() {
-        if (this.ballsPlayerOne > this.ballsPlayerTwo) {
-            return 'player one';
-        } else if (this.ballsPlayerOne < this.ballsPlayerTwo) {
-            return 'player two';
-        }
-    }
+	function winningPlayer() {
+		if (ballsPlayerOne > ballsPlayerTwo) {
+			return 'player one';
+		} else if (ballsPlayerOne < ballsPlayerTwo) {
+			return 'player two';
+		}
+	}
 
-    Tennis.prototype.score = function() {
-        if (this.ballsPlayerOne >= 4 && this.ballsPlayerTwo >= 4 && this.scoreIsEqual()) {
-            return 'deuce';
-        } else if (this.ballsPlayerOne >= 4 && this.ballsPlayerTwo >= 4) {
-            return 'advantage ' + this.winningPlayer();
-        } else {
-            return this.scores[this.ballsPlayerOne] + ' - ' + this.scores[this.ballsPlayerTwo];
-        }
-    }
-
-    Tennis.prototype.game = function(playerOne, playerTwo) {
-        this.ballsPlayerOne = playerOne;
-        this.ballsPlayerTwo = playerTwo;
-    }
-
+	return function() {
+		return {
+			score: function() {
+				if (ballsPlayerOne >= 4 && ballsPlayerTwo >= 4 && scoreIsEqual()) {
+					return 'deuce';
+				} else if (ballsPlayerOne >= 4 && ballsPlayerTwo >= 4) {
+					return 'advantage ' + winningPlayer();
+				} else {
+					return scores[ballsPlayerOne] + ' - ' + scores[ballsPlayerTwo];
+				}
+			},
+			game: function(playerOne, playerTwo) {
+				ballsPlayerOne = playerOne;
+				ballsPlayerTwo = playerTwo;
+			}
+		}
+	}();
 }

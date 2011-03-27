@@ -2,7 +2,7 @@ describe("Tennis", function() {
   var tennis;
 
   beforeEach(function() {
-    tennis = new Tennis();
+    tennis = makeTennis();
   });
 
   describe("regular match", function() {

@@ -35,7 +35,7 @@
       <file leaf-file-name="Tennis.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tennis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="9" selection-start="509" selection-end="509" vertical-scroll-proportion="0.4429708">
+            <state line="29" column="4" selection-start="786" selection-end="786" vertical-scroll-proportion="0.72148544">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="TennisSpec.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/TennisSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="27" selection-start="3330" selection-end="3330" vertical-scroll-proportion="0.0">
+            <state line="4" column="23" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -285,14 +285,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/TennisSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="27" selection-start="3330" selection-end="3330" vertical-scroll-proportion="0.0">
+        <state line="4" column="23" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tennis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="509" selection-end="509" vertical-scroll-proportion="0.4429708">
+        <state line="29" column="4" selection-start="786" selection-end="786" vertical-scroll-proportion="0.72148544">
           <folding />
         </state>
       </provider>
