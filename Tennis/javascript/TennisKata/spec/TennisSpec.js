@@ -62,7 +62,17 @@ describe("Tennis", function() {
   describe("winning", function() {
     [
       {playerOne: 4, playerTwo: 0, result: 'game player one'},
-      {playerOne: 0, playerTwo: 4, result: 'game player two'}
+      {playerOne: 0, playerTwo: 4, result: 'game player two'},
+      {playerOne: 4, playerTwo: 1, result: 'game player one'},
+      {playerOne: 1, playerTwo: 4, result: 'game player two'},
+      {playerOne: 4, playerTwo: 2, result: 'game player one'},
+      {playerOne: 2, playerTwo: 4, result: 'game player two'},
+      {playerOne: 5, playerTwo: 3, result: 'game player one'},
+      {playerOne: 3, playerTwo: 5, result: 'game player two'},
+      {playerOne: 6, playerTwo: 4, result: 'game player one'},
+      {playerOne: 4, playerTwo: 6, result: 'game player two'},
+      {playerOne: 7, playerTwo: 5, result: 'game player one'},
+      {playerOne: 5, playerTwo: 7, result: 'game player two'}
     ].forEach(function(testGame) {it ("should return " + testGame.result + " when score is " + testGame.playerOne + " - " + testGame.playerTwo, function() {
         tennis.game(testGame.playerOne, testGame.playerTwo);
         expect(tennis.score()).toBe(testGame.result);
