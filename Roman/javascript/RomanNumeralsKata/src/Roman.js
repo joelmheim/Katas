@@ -1,33 +1,37 @@
 function makeRomanNumerals() {
-	var tokens = { 1: "I", 4: "IV", 5: "V" }; 
+	var initialArabic, tokens = { 1: "I", 4: "IV", 5: "V", 9: "IX", 10: "X" }; 
 	
 	function findToken(arabic, remainder) {
 		var result, currentToken = tokens[arabic];
 		if (currentToken) {
+			remainder = initialArabic - arabic;
 			return { token: currentToken, rest: remainder};
-		} else {
-			remainder += 1;
-			return findToken(arabic-1, remainder);
 		}
+		return findToken(arabic-1, remainder);
 	}
 	
 	function computeRomanNumeral(arabic) {
 		var i, romanNumeral = "";
 		var result = findToken(arabic, 0);
-		if (result.rest === 0) {
-        	romanNumeral = result.token;
-        } else {
-           	for (i=0; i < result.rest + 1; i++ ){
-            	romanNumeral += result.token;
-            } 
-		}
-		return romanNumeral;
+		if (result.token) {
+        		romanNumeral += result.token;
+        }
+        if (result.rest === 0) {
+        	return romanNumeral;
+        }
+        initialArabic = result.rest;
+        return romanNumeral += computeRomanNumeral(initialArabic); 
 	}
 	
 	return function() {		
         return {
             numeral: function(arabic) {
+            	initialArabic = arabic;
             	return computeRomanNumeral(arabic);
+            },
+            testToken: function(arabic) {
+            	initialArabic = arabic;
+            	return findToken(arabic, 0);
             }
 	    }
     }();
