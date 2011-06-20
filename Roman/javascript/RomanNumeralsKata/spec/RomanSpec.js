@@ -26,26 +26,42 @@ describe("RomanNumerals", function() {
       { arabic: 17, numeral: 'XVII'},
       { arabic: 18, numeral: 'XVIII'},
       { arabic: 19, numeral: 'XIX'},
-      { arabic: 20, numeral: 'XX'}
+      { arabic: 20, numeral: 'XX'},
+      { arabic: 21, numeral: 'XXI'},
+      { arabic: 22, numeral: 'XXII'},
+      { arabic: 23, numeral: 'XXIII'},
+      { arabic: 24, numeral: 'XXIV'},
+      { arabic: 25, numeral: 'XXV'},
+      { arabic: 26, numeral: 'XXVI'},
+      { arabic: 27, numeral: 'XXVII'},
+      { arabic: 28, numeral: 'XXVIII'},
+      { arabic: 29, numeral: 'XXIX'},
+      { arabic: 30, numeral: 'XXX'},
+      { arabic: 31, numeral: 'XXXI'},
+      { arabic: 32, numeral: 'XXXII'},
+      { arabic: 33, numeral: 'XXXIII'},
+      { arabic: 34, numeral: 'XXXIV'},
+      { arabic: 35, numeral: 'XXXV'},
+      { arabic: 36, numeral: 'XXXVI'},
+      { arabic: 37, numeral: 'XXXVII'},
+      { arabic: 38, numeral: 'XXXVIII'},
+      { arabic: 39, numeral: 'XXXIX'},
+      { arabic: 40, numeral: 'XL'},
+      { arabic: 41, numeral: 'XLI'},
+      { arabic: 42, numeral: 'XLII'},
+      { arabic: 43, numeral: 'XLIII'},
+      { arabic: 44, numeral: 'XLIV'},
+      { arabic: 45, numeral: 'XLV'},
+      { arabic: 46, numeral: 'XLVI'},
+      { arabic: 47, numeral: 'XLVII'},
+      { arabic: 48, numeral: 'XLVIII'},
+      { arabic: 49, numeral: 'XLIX'},
+      { arabic: 50, numeral: 'L'}, 
+      { arabic: 1934, numeral: 'MCMXXXIV'},
+      { arabic: 3000, numeral: 'MMM'}
     ].forEach(function(testRoman) {it ("should return " + testRoman.numeral + " for arabic number " + testRoman.arabic, function() {
         expect(roman.numeral(testRoman.arabic)).toBe(testRoman.numeral);
       });
-    });
-  });
-  
-  describe("find correct token", function() {
-  	[
-  		{ arabic: 1, expectedToken: 'I', expectedRest: 0},
-  		{ arabic: 2, expectedToken: 'I', expectedRest: 1},
-  		{ arabic: 3, expectedToken: 'I', expectedRest: 2},
-  		{ arabic: 4, expectedToken: 'IV', expectedRest: 0},
-  		{ arabic: 5, expectedToken: 'V', expectedRest: 0},
-  		{ arabic: 6, expectedToken: 'V', expectedRest: 1}
-  	].forEach(function(testInput) { it("should return " + testInput.expectedToken + ", and remainder of " + testInput.expectedRest + " for arabic number " + testInput.arabic, function() {
-  		var expectedResult = roman.testToken(testInput.arabic);
-  		expect(expectedResult.token).toBe(testInput.expectedToken);
-  		expect(expectedResult.rest).toBe(testInput.expectedRest);
-  	  });
     });
   });
 });
